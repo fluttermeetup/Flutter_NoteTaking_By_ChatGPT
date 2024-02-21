@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app/models/note.dart';
-import 'package:notes_app/screens/note_create_screen.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
+import 'package:sqlite3/sqlite3.dart';
 import 'screens/notes_list_screen.dart'; // Assuming you have this file
 import 'screens/note_detail_screen.dart'; // Assuming you have this file
 import 'screens/note_edit_screen.dart'; // Assuming you have this file
@@ -14,6 +14,7 @@ void main() {
   // this step, it will use the sqlite version available on the system.
   databaseFactory = databaseFactoryFfi;
 
+  print(sqlite3.version);
   runApp(NotesApp());
 }
 
